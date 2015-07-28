@@ -11,10 +11,19 @@ RUN echo "deb http://packages.groonga.org/debian/ jessie main" >> /etc/apt/sourc
 # Poppler
 RUN apt-get install -y poppler-utils fonts-ipaexfont-gothic
 
-# Honyomi
-RUN gem install honyomi -v 1.3 --no-ri --no-rdoc
-RUN honyomi init
+# Honyomi (bundle install)
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
+COPY Gemfile /usr/src/app/
+COPY Gemfile.lock /usr/src/app/
+RUN bundle install
+
+COPY . /usr/src/app
+
+RUN bundle exec honyomi init
+
+# Run Honyomi
 EXPOSE 9295
 
-CMD honyomi web --host=0.0.0.0 --no-browser
+CMD bundle exec honyomi web --host=0.0.0.0 --no-browser
