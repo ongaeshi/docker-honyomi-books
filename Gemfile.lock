@@ -1,3 +1,17 @@
+GIT
+  remote: git://github.com/ongaeshi/honyomi-books.git
+  revision: a9a62826fbf8f7f522bd1ee2ef7745d60b348975
+  specs:
+    honyomi (1.3.0)
+      grn_mini (~> 0.5)
+      haml
+      launchy
+      rack
+      sinatra
+      thin (< 1.7)
+      thor
+      whichr (~> 0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,15 +30,6 @@ GEM
       json
     haml (4.0.6)
       tilt
-    honyomi (1.3.0)
-      grn_mini (~> 0.5)
-      haml
-      launchy
-      rack
-      sinatra
-      thin (< 1.7)
-      thor
-      whichr (~> 0.3)
     io-like (0.3.0)
     json (1.8.3)
     launchy (2.4.3)
@@ -58,7 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  honyomi
+  honyomi!
 
 BUNDLED WITH
    1.10.5
