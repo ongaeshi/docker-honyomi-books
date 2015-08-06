@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/ongaeshi/honyomi-books.git
-  revision: a9a62826fbf8f7f522bd1ee2ef7745d60b348975
+  revision: f12ee96e17dae0db202edae1576f630d6a60bbd3
   specs:
-    honyomi (1.3.0)
+    honyomi (1.4.0)
       grn_mini (~> 0.5)
       haml
       launchy
